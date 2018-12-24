@@ -9,7 +9,9 @@
     "packages/*"
   ],
   "scripts": {
-    "start:api": "cd ./packages/server && npx ts-node ./src/index.ts"
+    "serve": "cd ./packages/client && yarn serve",
+    "build:client": "cd ./packages/client && yarn build",
+    "clean": "rimraf yarn.lock node_modules ./**/node_modules; yarn"
   },
   "devDependencies": {
     "@types/node": "^10.12.18",

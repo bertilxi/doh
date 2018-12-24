@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Router from "vue-router";
-import { getRandomChapter } from "@/service/utils";
 
 Vue.use(Router);
 
@@ -11,15 +10,22 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      beforeEnter: (to, from, next) => {
-        const selectedChapter = getRandomChapter();
-        next({ name: "video", params: { selectedChapter } });
-      },
+      component: () => import("./views/Home.vue")
     },
     {
-      path: "/video/:selectedChapter",
-      name: "video",
-      component: () => import("./views/Video.vue"),
+      path: "/random",
+      name: "random",
+      component: () => import("./views/Random.vue")
     },
-  ],
+    {
+      path: "/season/:seasonId",
+      name: "season",
+      component: () => import("./views/Season.vue")
+    },
+    {
+      path: "/season/:seasonId/chapter/:id/:lang",
+      name: "chapter",
+      component: () => import("./views/Chapter.vue")
+    }
+  ]
 });

@@ -1,40 +1,29 @@
-@import "../../node_modules/icono/sass/variables";
-@import "../../node_modules/icono/sass/mixins";
-@import "../../node_modules/icono/sass/functions";
-@import "../../node_modules/icono/sass/generals";
-@import "../../node_modules/icono/sass/icons/caret.scss";
-@import "../../node_modules/icono/sass/icons/reset.scss";
+@import "./spectre.scss";
+@import "~spectre.css/src/spectre-icons";
 
-[class*="icono-"] {
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  font-style: normal;
-  color: $maincolor;
-  text-align: left;
-  text-indent: -9999px;
-  direction: ltr;
-  &:before,
-  &:after {
-    content: "";
-    pointer-events: none;
+.btn {
+  font-weight: 600;
+}
+.btn-group {
+  border-radius: $border-radius;
+}
+.btn-secondary {
+  background: $success-color;
+  color: $light-color;
+  border-color: darken($success-color, 3%);
+  &:hover {
+    background: darken($success-color, 3%);
+    border-color: darken($success-color, 6%);
   }
-  &[class*="Circle"] {
-    @extend .icono-stroke;
-    border-radius: 50%;
-    width: $U30;
-    height: $U30;
-    margin: $U2;
-  }
-  &[class*="Square"] {
-    @extend .icono-stroke;
-    border-radius: $U4;
-    width: $U30;
-    height: $U30;
-    margin: $U2;
-  }
-  &,
-  & * {
-    box-sizing: border-box;
-  }
+}
+
+.card {
+  border: 0;
+  box-shadow: 0 0.25rem 1rem rgba(48, 55, 66, 0.15);
+  height: 100%;
+  margin-bottom: 1rem;
+}
+
+.btn-shadow {
+  box-shadow: 0 0.1rem 0.5rem rgba(48, 55, 66, 0.15);
 }
