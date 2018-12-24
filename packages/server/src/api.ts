@@ -5,6 +5,8 @@ import { setupDatabase } from "./database";
 
 const app = fastify();
 
+app.register(require("fastify-cors"));
+
 app.get("/season", (request, reply) => {
   return Season.query();
 });
