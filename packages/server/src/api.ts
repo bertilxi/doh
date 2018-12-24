@@ -17,15 +17,18 @@ app.get("/season/:seasonNumber", (request, reply) => {
     .where({
       seasonNumber: params.seasonNumber
     })
-    .eager("chapters");
+    .eager("chapters")
+    .then(seasons => seasons[0]);
 });
 
 app.get("/season/:seasonNumber/chapter/:chapterNumber", (request, reply) => {
   const params = request.params;
-  return Chapter.query().where({
-    seasonid: params.seasonNumber,
-    chapterNumber: params.chapterNumber
-  });
+  return Chapter.query()
+    .where({
+      seasonid: params.seasonNumber,
+      chapterNumber: params.chapterNumber
+    })
+    .then(chapters => chapters[0]);
 });
 
 export const start = async () => {
