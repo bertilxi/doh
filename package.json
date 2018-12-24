@@ -9,7 +9,7 @@
     "packages/*"
   ],
   "scripts": {
-    "start:api": "cd ./packages/server && ts-node ./src/index.ts"
+    "start:api": "cd ./packages/server && npx ts-node ./src/index.ts"
   },
   "devDependencies": {
     "@types/node": "^10.12.18",
