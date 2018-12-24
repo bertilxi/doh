@@ -7,7 +7,7 @@ const app = fastify();
 
 app.register(require("fastify-cors"));
 
-app.get("/season", (request, reply) => {
+app.get("/season", () => {
   return Season.query();
 });
 
@@ -29,6 +29,16 @@ app.get("/season/:seasonNumber/chapter/:chapterNumber", (request, reply) => {
       chapterNumber: params.chapterNumber
     })
     .then(chapters => chapters[0]);
+});
+
+const getRandom = (first: number, last: number) => {
+  return Math.floor(Math.random() * (last - first + 1)) + first;
+};
+
+app.get("/random", () => {
+  return Chapter.query().then(chapters => {
+    return chapters[Math.floor(Math.random() * chapters.length)];
+  });
 });
 
 export const start = async () => {
