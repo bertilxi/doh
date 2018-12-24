@@ -1,0 +1,23 @@
+{
+  "name": "doh.server",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node ./src",
+    "migrate": "rimraf *.sqlite3 && knex --knexfile knexfile.ts migrate:latest && ts-node ./src/save.ts"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "fastify": "^1.13.3",
+    "knex": "^0.16.3",
+    "lodash": "^4.17.11",
+    "objection": "^1.4.0",
+    "sqlite3": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.10",
+    "@types/knex": "^0.15.1",
+    "@types/lodash": "^4.14.119"
+  }
+}
