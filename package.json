@@ -8,6 +8,9 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "start": "cd ./packages/server && ts-node ./src/index.ts"
+  },
   "devDependencies": {
     "@types/node": "^10.12.18",
     "@types/jest": "^23.3.10",
