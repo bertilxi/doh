@@ -1,1 +1,1 @@
-web: yarn start:api
+web: yarn && yarn start:api
