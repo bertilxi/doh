@@ -1,51 +1,24 @@
 {
   "name": "doh",
-  "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
-  },
-  "dependencies": {
-    "icono": "^1.3.2",
-    "register-service-worker": "^1.5.2",
-    "vue": "^2.5.17",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
-  },
+  "version": "0.1.0",
+  "repository": "git@github.com:bertilxi/doh.git",
+  "author": "Fernando Berti <bertilxi@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
-    "@types/jest": "^23.1.4",
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-pwa": "^3.2.0",
-    "@vue/cli-plugin-typescript": "^3.2.0",
-    "@vue/cli-plugin-unit-jest": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
-    "@vue/test-utils": "^1.0.0-beta.20",
-    "babel-core": "7.0.0-bridge.0",
-    "lint-staged": "^7.2.2",
-    "node-sass": "^4.9.0",
+    "@types/node": "^10.12.18",
+    "@types/jest": "^23.3.10",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
     "prettier": "^1.15.3",
-    "sass-loader": "^7.0.1",
-    "ts-jest": "^23.0.0",
-    "tslint-config-prettier": "^1.17.0",
-    "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.5.17"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
+    "rimraf": "^2.6.2",
+    "ts-node": "^7.0.1",
+    "lint-staged": "^7.2.2",
+    "tslint-config-prettier": "^1.17.0"
   }
 }
