@@ -6,6 +6,13 @@ import { setupDatabase } from "./database";
 const app = fastify();
 
 app.register(require("fastify-cors"));
+app.register(require("fastify-helmet"));
+app.register(require("fastify-compress"), { brotli: require("iltorb") });
+
+app.get("/", async () => ({
+  message: `Welcome to the D'Oh API`,
+  version: require("../package.json").version
+}));
 
 app.get("/season", () => {
   return Season.query();
@@ -30,10 +37,6 @@ app.get("/season/:seasonNumber/chapter/:chapterNumber", (request, reply) => {
     })
     .then(chapters => chapters[0]);
 });
-
-const getRandom = (first: number, last: number) => {
-  return Math.floor(Math.random() * (last - first + 1)) + first;
-};
 
 app.get("/random", () => {
   return Chapter.query().then(chapters => {

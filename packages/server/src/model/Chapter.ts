@@ -1,4 +1,4 @@
-import { Model, RelationMappings, Pojo } from "objection";
+import { Model, RelationMappings } from "objection";
 import Season from "./Season";
 
 interface Lang {
