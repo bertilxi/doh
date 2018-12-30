@@ -7,7 +7,7 @@ import {
 export const api = axios.create({
   baseURL:
     process.env.NODE_ENV === "production"
-      ? "https://localhost/api"
+      ? "https://doh.netlify.com/api"
       : "http://localhost:8080/api",
   headers: { "Cache-Control": "no-cache" },
   adapter: throttleAdapterEnhancer(
