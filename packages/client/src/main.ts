@@ -4,7 +4,7 @@ import App from "@/App.vue";
 import router from "@/router";
 import store from "@/store";
 import VueWait from "vue-wait";
-// import "@/registerServiceWorker";
+import "@/registerServiceWorker";
 
 Vue.config.productionTip = false;
 Vue.use(VueWait);

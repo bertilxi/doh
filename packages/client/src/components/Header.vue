@@ -5,9 +5,6 @@
         <h2>D'OH</h2>
       </router-link>
     </section>
-    <v-wait>
-      <atom-spinner slot="waiting" :animation-duration="1000" :size="40" color="#ff1d5e"/>
-    </v-wait>
     <section class="navbar-section">
       <div class="dropdown dropdown-right">
         <a class="btn btn-link btn-shadow dropdown-toggle" tabindex="0">
