@@ -48,7 +48,6 @@ export default new Vuex.Store<State>({
       context.dispatch("wait/end");
     },
     async getRandom(context) {
-      console.log("getRandom");
       context.dispatch("wait/start");
       const { data } = await api.get("/random", { cache: false } as any);
       const chapter = data;

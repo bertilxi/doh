@@ -1,6 +1,14 @@
 const path = require("path");
 
 module.exports = {
+  devServer: {
+    proxy: {
+      "/api": {
+        target: "http://45.79.20.223",
+        pathRewrite: { "^/api": "" }
+      }
+    }
+  },
   pwa: {
     name: "Doh",
     themeColor: "#ffcf00",
