@@ -21,10 +21,6 @@ if (process.env.NODE_ENV === "production") {
     },
     updated() {
       console.log("New content is available; please refresh.");
-      const result = confirm("Update ready, Wanna Update?");
-      if (result) {
-        window.location.reload(true);
-      }
     },
     offline() {
       console.log(
