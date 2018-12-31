@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="columns">
     <ChapterCard :chapter="chapter"/>
     <VideoCard :src="chapter.iframe"/>
   </div>

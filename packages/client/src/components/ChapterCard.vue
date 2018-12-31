@@ -1,5 +1,5 @@
 <template>
-  <div class="column">
+  <div class="column col-12 chapter">
     <div class="card">
       <div class="card-header">
         <div class="card-title h5 text-primary">{{ chapter.title }}</div>
@@ -8,7 +8,7 @@
         <p class="text-dark">{{chapter.description}}</p>
       </div>
       <div class="card-footer">
-        <div class="btn-group btn-group-block btn-shadow">
+        <div class="btn-group btn-group-block column col-xl-12 col-6 col-ml-auto p-0">
           <button
             v-for="(lang, index) in chapter.langs"
             :key="lang.label"
@@ -35,3 +35,9 @@ export default class ChapterCard extends Vue {
   @Action("selectChapter") selectChapter;
 }
 </script>
+
+<style scoped>
+.chapter {
+  padding-bottom: 0.75rem;
+}
+</style>

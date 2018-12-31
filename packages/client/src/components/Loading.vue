@@ -1,20 +1,15 @@
 <template>
   <v-wait>
     <div class="loader-container" slot="waiting">
-      <atom-spinner class="loader" :animation-duration="1000" :size="80" color="#ff1d5e"/>
+      <div class="loader loading loading-lg"/>
     </div>
   </v-wait>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import { AtomSpinner } from "epic-spinners";
 
-@Component({
-  components: {
-    AtomSpinner
-  }
-})
+@Component
 export default class Loading extends Vue {}
 </script>
 

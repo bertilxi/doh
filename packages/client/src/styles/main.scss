@@ -1,6 +1,11 @@
 @import "./spectre.scss";
 @import "~spectre.css/src/spectre-icons";
 
+html,
+body {
+  height: 100%;
+}
+
 .btn {
   font-weight: 600;
 }
@@ -26,4 +31,14 @@
 
 .btn-shadow {
   box-shadow: 0 0.1rem 0.5rem rgba(48, 55, 66, 0.15);
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.btn-group {
+  .btn {
+    border-radius: $border-radius !important;
+    margin: 0.1rem !important;
+  }
 }
