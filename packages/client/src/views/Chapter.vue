@@ -6,7 +6,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue } from "vue-property-decorator";
 import { State } from "vuex-class";
 import ChapterCard from "@/components/ChapterCard.vue";
 import VideoCard from "@/components/VideoCard.vue";
@@ -19,8 +19,5 @@ import VideoCard from "@/components/VideoCard.vue";
 })
 export default class Chapter extends Vue {
   @State("chapter") chapter: any;
-
-  @Watch("$route")
-  onRouteChange(val: any, oldVal: any) {}
 }
 </script>

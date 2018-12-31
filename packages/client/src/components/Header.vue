@@ -59,7 +59,7 @@ export default class Header extends Vue {
   top: 0;
   background-color: rgba($color: #fff, $alpha: 0.9);
   padding: 1rem 0;
-  z-index: 1000;
+  z-index: 98;
 }
 .brand {
   align-items: center;

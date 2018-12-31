@@ -11,6 +11,7 @@
   "scripts": {
     "serve": "cd ./packages/client && yarn serve",
     "build:client": "cd ./packages/client && yarn build",
+    "test:unit:client": "cd ./packages/client && yarn test:unit",
     "clean": "rimraf yarn.lock node_modules ./**/node_modules; yarn"
   },
   "devDependencies": {

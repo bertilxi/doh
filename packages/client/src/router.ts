@@ -13,6 +13,11 @@ export default new Router({
       component: () => import("./views/Home.vue")
     },
     {
+      path: "/auth",
+      name: "auth",
+      component: () => import("./views/Auth.vue")
+    },
+    {
       path: "/random",
       name: "random",
       component: () => import("./views/Random.vue")
