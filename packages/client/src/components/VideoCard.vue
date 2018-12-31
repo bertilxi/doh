@@ -15,7 +15,7 @@ import { Component, Vue, Prop } from "vue-property-decorator";
 
 @Component
 export default class VideoCard extends Vue {
-  @Prop() src!: any;
+  @Prop() public src!: any;
 }
 </script>
 

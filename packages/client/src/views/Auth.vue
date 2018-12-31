@@ -6,7 +6,7 @@ import * as netlifyIdentity from "netlify-identity-widget";
 
 @Component
 export default class Auth extends Vue {
-  mounted() {
+  public mounted() {
     netlifyIdentity.init({});
     netlifyIdentity.open();
   }

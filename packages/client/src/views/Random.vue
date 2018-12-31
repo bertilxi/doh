@@ -6,9 +6,9 @@ import { Action } from "vuex-class";
 
 @Component
 export default class Random extends Vue {
-  @Action("getRandom") getRandom;
+  @Action("getRandom") public getRandom;
 
-  beforeMount() {
+  public beforeMount() {
     this.getRandom();
   }
 }

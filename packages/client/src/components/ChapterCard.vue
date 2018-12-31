@@ -31,8 +31,8 @@ import { Action } from "vuex-class";
 
 @Component
 export default class ChapterCard extends Vue {
-  @Prop() chapter!: any;
-  @Action("selectChapter") selectChapter;
+  @Prop() public chapter!: any;
+  @Action("selectChapter") public selectChapter;
 }
 </script>
 

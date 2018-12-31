@@ -44,10 +44,10 @@ import Menu from "@/components/Menu.vue";
   }
 })
 export default class Header extends Vue {
-  @State("seasons") seasons!: any[];
-  @Action("getSeasons") getSeasons;
+  @State("seasons") public seasons!: any[];
+  @Action("getSeasons") public getSeasons;
 
-  mounted() {
+  public mounted() {
     this.getSeasons();
   }
 }

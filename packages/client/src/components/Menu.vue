@@ -19,14 +19,14 @@ import { Component, Vue } from "vue-property-decorator";
 
 @Component
 export default class Menu extends Vue {
-  active = false;
-  show() {
+  public active = false;
+  public show() {
     this.active = true;
   }
-  hide() {
+  public hide() {
     this.active = false;
   }
-  deferHide() {
+  public deferHide() {
     setTimeout(() => {
       this.hide();
     }, 100);

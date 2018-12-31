@@ -18,17 +18,17 @@ import ChapterCard from "@/components/ChapterCard.vue";
   }
 })
 export default class Season extends Vue {
-  @State("season") season: any;
-  @Action("getSeason") getSeason;
-  @Action("selectChapter") selectChapter;
+  @State("season") public season: any;
+  @Action("getSeason") public getSeason;
+  @Action("selectChapter") public selectChapter;
 
   @Watch("$route")
-  onRouteChange(val: any, oldVal: any) {
+  public onRouteChange(val: any, oldVal: any) {
     const id = val.params.seasonId;
     this.getSeason(id);
   }
 
-  beforeMount() {
+  public beforeMount() {
     const id = this.$route.params.seasonId;
     if (!id) {
       this.$router.replace({ name: "home" });

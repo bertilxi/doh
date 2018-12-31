@@ -18,6 +18,6 @@ import VideoCard from "@/components/VideoCard.vue";
   }
 })
 export default class Chapter extends Vue {
-  @State("chapter") chapter: any;
+  @State("chapter") public chapter: any;
 }
 </script>
