@@ -1,7 +1,25 @@
 {
-  "extends": "../../tsconfig",
   "compilerOptions": {
+    "sourceMap": true,
     "module": "esnext",
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": true,
+    "noUnusedLocals": true,
+    "moduleResolution": "node",
+    "inlineSources": false,
+    "types": ["node", "webpack-env", "jest"],
+    "target": "es6",
+    "allowJs": true,
+    "skipLibCheck": false,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
