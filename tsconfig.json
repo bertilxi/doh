@@ -10,7 +10,7 @@
     "moduleResolution": "node",
     "inlineSources": false,
     "types": ["node", "webpack-env", "jest"],
-    "target": "esnext",
+    "target": "es6",
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
