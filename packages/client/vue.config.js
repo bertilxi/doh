@@ -10,6 +10,10 @@ module.exports = {
     }
   },
   pwa: {
+    workboxPluginMode: "GenerateSW",
+    workboxOptions: {
+      skipWaiting: true
+    },
     name: "Doh",
     themeColor: "#ffcf00",
     msTileColor: "#FFFFFF",
