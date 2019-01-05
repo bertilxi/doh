@@ -26,5 +26,6 @@ module.exports = {
         path: path.join(__dirname, "postcss.config.js")
       }
     }
-  }
+  },
+  transpileDependencies: ["vuex-persist"]
 };
